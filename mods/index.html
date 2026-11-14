@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- Mods page: every Rush mod, searchable, with All / Alpha / Beta only filters.
+     The list itself lives in js/modules.js; js/mods.js draws and filters it.
+     This page is one folder down, so every link to a shared file starts with "../". -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mods · Rush Utility Mod</title>
+  <meta name="description" content="Every mod in Rush, the Minecraft Bedrock client. Search the full list and see which are Beta-only.">
+  <link rel="icon" href="../assets/images/rush-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=7">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!-- Top bar (same on every page; links differ only in the "../" prefix) -->
+  <header class="nav">
+    <a class="brand" href="../">
+      <img src="../assets/images/rush-logo.jpg" alt="" width="36" height="36">
+      <span>Rush</span>
+    </a>
+    <nav aria-label="Pages">
+      <a href="../">Home</a>
+      <a href="./" aria-current="page">Mods</a>
+      <a href="../#editions">Editions</a>
+      <a href="../#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-small" href="https://github.com/Juice-loot-is-pog/Rush-Injector/releases/latest/download/Rush-Injector.exe">Download</a>
+  </header>
+
+  <main>
+    <!-- Page title -->
+    <section class="page-header section-art art-spiral">
+      <h1>All mods</h1>
+      <p><strong><span data-count="alpha">148</span> mods</strong> in Alpha for free, plus <strong><span data-count="beta">50</span> more</strong> in Beta. Every one is set up from the Click GUI and can be bound to a key.</p>
+    </section>
+
+    <!-- Searchable list -->
+    <section id="mods" class="section">
+      <div class="filters">
+        <input id="search" type="search" placeholder="Search mods…" aria-label="Search mods">
+        <div class="chips">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="alpha">Alpha</button>
+          <button class="chip" data-filter="beta">Beta only</button>
+        </div>
+      </div>
+      <p class="lead"><span class="tag tag-beta">Beta</span> marks mods that are only in Beta.</p>
+      <ul id="mod-list" class="mod-list"></ul>
+      <p id="empty" class="empty" hidden>No mods match that search.</p>
+    </section>
+
+    <!-- Send people on to download -->
+    <section class="section download section-art art-client">
+      <h2>Ready to play?</h2>
+      <p class="lead">Alpha is free. Beta comes with a Patreon membership.</p>
+      <div class="cta">
+        <a class="btn" href="../#download">Get Rush</a>
+        <a class="btn btn-ghost" href="../#editions">Compare editions</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="../assets/images/rush-logo.jpg" alt="" width="28" height="28">
+    <span>Rush Utility Mod</span>
+    <span class="muted">Not affiliated with Mojang or Microsoft.</span>
+  </footer>
+
+  <script src="../js/modules.js?v=7"></script>
+  <script src="../js/site.js?v=7"></script>
+  <script src="../js/mods.js?v=7"></script>
+</body>
+</html>
