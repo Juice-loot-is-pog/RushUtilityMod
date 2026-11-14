@@ -186,7 +186,10 @@ img { display: block; }
     linear-gradient(180deg, var(--bg) 0%, rgba(11, 6, 6, .1) 12%, rgba(11, 6, 6, .35) 32%, var(--bg) 52%),
     url("../assets/images/banner-client.webp");
   background-size: cover, max(100%, 1200px) auto;
-  background-position: center, center top;
+  /* The "Rush Client" lettering sits ~47% down the banner (banner height = 56.25% of its width).
+     Shift the banner up so the lettering's middle lands ~330px into the section, behind the steps,
+     at any screen width, instead of being cut off by the fade at the bottom. */
+  background-position: center, center calc(330px - max(26.4vw, 317px));
 }
 /* Keep the steps readable over the brighter banner. */
 .art-client .steps {
