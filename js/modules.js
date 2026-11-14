@@ -14,7 +14,7 @@ ArmorHud LagbackHud InventoryHud CpsHud CombatInfoHud PingHud CombatItemCounter 
 BaseFinder HoleESP FakePlayer Trail ProjectileTrails JumpCircles BreakProgress PlaceHighlights TargetRing TargetEsp Fog
 Fullbright Performance ViewModel Nametags CustomFov Zoom Freelook NoHurtCam NoRender ItemEsp Crosshair BlockOutline
 Waypoints TargetHud HudEditor CheckBypasses VelocityCap LocalWorld AntiBot Friends Targets AntiCheatMonitor AntiAfk
-DeathLog PlayerAlerts NameProtect AutoLog AutoReconnect HideChat HideCoords NoRotate AntiCrash`.split(/\s+/);
+DeathLog PlayerAlerts NameProtect AutoLog AutoReconnect HideChat HideCoords NoRotate AntiCrash AirPlace`.split(/\s+/);
 
 const BETA_MODS = `ResourcePackChanger Scripts ElytraSwap Offhand MaceKill SpearKill Schematics SchematicList LogoutSpots StorageESP
 HitEffects HoleFiller AutoCity AutoBed PopCounter Nuker WebBreaker AutoMine Macros Minimap WorldProfiles ShulkerPeek

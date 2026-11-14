@@ -30,7 +30,7 @@ assets/fonts/         Comfortaa (fallback copy; pages load it from Google Fonts)
 - **New mod:** add its ID to `ALPHA_MODS` or `BETA_MODS` in `js/modules.js` (the same IDs as `Rush/Rush/editions/*.modules`). Counts on every page update by themselves. If its name doesn't read well when split automatically ("AutoGap" → "Auto Gap"), add it to `MOD_NAMES`.
 - **Colors and font:** the variables at the top of `css/styles.css` (`--red`, `--deep`, `--red-light`, `--font`, …). The vaporwave look of buttons and badges comes from the `--vapor-*` variables next to the button styles.
 - **Images:** put new ones in `assets/images/` and refer to them from CSS as `../assets/images/<name>` (CSS paths start from the `css/` folder).
-- **After changing CSS or JS:** bump the `?v=7` (to `?v=8`, and so on) at the end of the `<link>` and `<script>` addresses in every page, so visitors' browsers fetch the new file instead of an old saved copy.
+- **After changing CSS or JS:** bump the `?v=8` (to `?v=9`, and so on) at the end of the `<link>` and `<script>` addresses in every page, so visitors' browsers fetch the new file instead of an old saved copy.
 
 ## Links used
 
