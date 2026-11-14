@@ -6,7 +6,7 @@ A plain static site: HTML, CSS and JavaScript, no build step. Open `index.html` 
 
 | Page | File | What's on it |
 |---|---|---|
-| Home | `index.html` | Banner, **Get Rush** (download + how to get Beta), overview cards, Alpha vs Beta, FAQ |
+| Home | `index.html` | Banner, Alpha vs Beta, **Get Rush** (download + how to get Beta), overview cards, FAQ |
 | Mods | `mods/index.html` | Every mod, with search and All / Alpha / Beta only filters |
 
 Each page is its own folder with an `index.html`, so its address is short (`/mods/`). To add a page, make a new folder such as `guides/` with an `index.html` copied from `mods/index.html`, then add a link to it in the top bar (`<nav>`) of **every** page.
