@@ -20,12 +20,13 @@ const BETA_MODS = `ResourcePackChanger Scripts ElytraSwap Offhand MaceKill Spear
 HitEffects HoleFiller AutoCity AutoBed PopCounter Nuker WebBreaker AutoMine Macros Minimap WorldProfiles ShulkerPeek
 ShulkerNesting ContainerView EffectsHud TimeWeather AutoFarm AutoFish AutoQueue Cosmetics Shaders PacketLogger Warnings
 CustomText CustomChat Animations NoCameraClip Timer TickShift TerrainSpeed HighJump Glide FastPlace BlockReach
-NoMiningTrace LagNotifier BaritoneHud ClickTP ServerRestrictions SlowFall`.split(/\s+/);
+NoMiningTrace LagNotifier BaritoneHud ClickTP ServerRestrictions SlowFall FarWalk CornerClip DashDupe`.split(/\s+/);
 
 // Display names: IDs like "AutoGap" become "Auto Gap". Special cases go here.
 const MOD_NAMES = { Killaura: "Kill Aura", ItemEsp: "Item ESP", TargetEsp: "Target ESP", HudEditor: "HUD Editor",
   TabList: "Tab List", ClickTP: "Click TP", AutoGG: "Auto GG", FpsHud: "FPS HUD", CpsHud: "CPS HUD",
-  ClickGuiSettings: "Click GUI", CustomFov: "Custom FOV", ResourcePackChanger: "Resource Pack Changer" };
+  ClickGuiSettings: "Click GUI", CustomFov: "Custom FOV", ResourcePackChanger: "Resource Pack Changer",
+  DashDupe: "IGN Dupe" };
 
 function modName(id) {
   return MOD_NAMES[id] || id
