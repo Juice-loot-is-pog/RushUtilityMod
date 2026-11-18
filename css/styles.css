@@ -66,6 +66,40 @@ img { display: block; }
 .page-header p { color: var(--muted); margin: 0 auto; max-width: 620px; font-size: 18px; }
 .page-header p strong { color: var(--text); }
 
+/* Mods page title over the tilted, blurred Click GUI */
+.gui-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  min-height: min(620px, 78vh); display: flex; flex-direction: column; justify-content: center;
+  padding-bottom: 72px;
+}
+/* Fade the GUI into the page at the top and bottom, and darken the middle behind the text. */
+.gui-hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 50%, rgba(11, 6, 6, .7), transparent 75%),
+    linear-gradient(180deg, var(--bg) 0%, rgba(11, 6, 6, .25) 20%, rgba(11, 6, 6, .3) 50%, var(--bg) 96%);
+}
+.gui-backdrop {
+  position: absolute; z-index: -2; inset: 0; perspective: 1400px; pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.gui-backdrop img {
+  width: max(1250px, 118vw); max-width: none; height: auto;
+  /* Fade the lower edge so the screenshot never ends in a hard line. */
+  -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent 85%);
+  mask-image: linear-gradient(180deg, #000 45%, transparent 85%);
+  transform: translate(4%, 8%) rotateX(32deg) rotateY(-14deg) rotateZ(-13deg);
+  filter: blur(2.5px) brightness(.62) saturate(1.1);
+  border-radius: 10px;
+  animation: gui-float 1.6s cubic-bezier(.2, .7, .2, 1) both;
+}
+.gui-hero h1 { font-size: clamp(40px, 8vw, 80px); }
+.gui-hero p { color: #d8cccc; }
+@keyframes gui-float {
+  from { opacity: 0; transform: translate(4%, 18%) rotateX(42deg) rotateY(-14deg) rotateZ(-13deg); }
+  to { opacity: 1; transform: translate(4%, 8%) rotateX(32deg) rotateY(-14deg) rotateZ(-13deg); }
+}
+
 /* "See all mods" link under the overview cards */
 .more-link { text-align: center; margin: 32px 0 0; }
 .more-link a { color: var(--red-light); font-weight: 600; text-decoration: none; }
@@ -375,7 +409,7 @@ kbd, code {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-banner img, .hero-inner > *, .page-header > * { animation: none; }
+  .hero-banner img, .hero-inner > *, .page-header > *, .gui-backdrop img { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
 }
 
